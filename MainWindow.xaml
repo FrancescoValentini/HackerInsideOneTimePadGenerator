@@ -1,0 +1,48 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:HackerInsideOneTimePadGenerator"
+        xmlns:System="clr-namespace:System;assembly=System.Runtime" x:Class="HackerInsideOneTimePadGenerator.MainWindow"
+        mc:Ignorable="d"
+        Title="HackerInside One Time Pad Generator" Height="450" Width="800" ResizeMode="CanMinimize" Background="#FF535353" Foreground="White" Icon="/spy.png">
+    <Grid>
+        <Button x:Name="btnGeneraOTP" Content="GENERA" HorizontalAlignment="Left" Margin="10,198,0,0" VerticalAlignment="Top" Height="29" Width="67" Click="btnGeneraOTP_Click"/>
+        <Label Content="Lunghezza Riga:" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Foreground="White"/>
+        <Label Content="Lunghezza OTP:" HorizontalAlignment="Left" Margin="10,41,0,0" VerticalAlignment="Top" Foreground="White"/>
+        <Label Content="Separatore: " HorizontalAlignment="Left" Margin="10,72,0,0" VerticalAlignment="Top" Foreground="White"/>
+        <TextBox x:Name="txtbLunghezzaRiga" HorizontalAlignment="Left" Margin="110,16,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="37" Text="8"/>
+        <TextBox x:Name="txtbLunghezzaOTP" HorizontalAlignment="Left" Margin="110,48,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="37" Text="5"/>
+        <TextBox x:Name="txtbSeparatore" HorizontalAlignment="Left" Margin="110,76,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="37" Text="-"/>
+        <Label Content="OTP Per blocco:" HorizontalAlignment="Left" Margin="10,101,0,0" VerticalAlignment="Top" Foreground="White"/>
+        <TextBox x:Name="txtbOTPPerBlocco" HorizontalAlignment="Left" Margin="110,108,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="37" Text="6"/>
+        <RichTextBox x:Name="txtbOTP" Margin="182,10,10,10" FontFamily="Monospac821 BT" IsReadOnly="True" HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto">
+            <FlowDocument>
+                <Paragraph>
+
+                </Paragraph>
+            </FlowDocument>
+        </RichTextBox>
+        <Label Content="Blocchi:" HorizontalAlignment="Left" Margin="11,132,0,0" VerticalAlignment="Top" Foreground="White"/>
+        <TextBox x:Name="txtbOTPDaGenerare" HorizontalAlignment="Left" Margin="110,136,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="37" Text="10"/>
+        <Label Content="Tipologia:" HorizontalAlignment="Left" Margin="4,156,0,0" VerticalAlignment="Top" Foreground="White"/>
+        <ComboBox x:Name="cmbTipologia" HorizontalAlignment="Left" Margin="71,161,0,0" VerticalAlignment="Top" Width="100" Height="20" SelectedIndex="0" DropDownClosed="cmbTipologia_DropDownClosed">
+            <System:String>Lettere</System:String>
+            <System:String>Numeri</System:String>
+            <System:String>Hex</System:String>
+            <System:String>KTC1400C</System:String>
+            <System:String>KTC1400D</System:String>
+            <System:String>AUTH TABLE</System:String>
+            <System:String>VLOTP</System:String>
+        </ComboBox>
+        <GroupBox x:Name="grpBoxStats" Header="Statistiche" Margin="4,232,623,10"/>
+        <Label x:Name="lblCaratteriRiga" Content="Caratteri per riga:" HorizontalAlignment="Left" Margin="10,251,0,0" VerticalAlignment="Top" Foreground="White"/>
+        <Label x:Name="lblCarattereBlocco" Content="Caratteri per blocco:" HorizontalAlignment="Left" Margin="10,277,0,0" VerticalAlignment="Top" Foreground="White"/>
+        <Label x:Name="lblCaratteriTotali" Content="Caratteri totali:" HorizontalAlignment="Left" Margin="10,302,0,0" VerticalAlignment="Top" Foreground="White"/>
+        <Label x:Name="txtbCPerRiga" Content="0" HorizontalAlignment="Left" Margin="113,253,0,0" VerticalAlignment="Top" Foreground="White"/>
+        <Label x:Name="txtbCPerBlocco" Content="0" HorizontalAlignment="Left" Margin="127,279,0,0" VerticalAlignment="Top" Foreground="White"/>
+        <Label x:Name="txtbCTotali" Content="0" HorizontalAlignment="Left" Margin="98,304,0,0" VerticalAlignment="Top" Foreground="White"/>
+
+    </Grid>
+</Window>
